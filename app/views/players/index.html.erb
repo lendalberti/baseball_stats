@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+
+<h1>MLB Player Statistics (non-pitching)</h1>
+
+<div style='margin-top: 50px;'>
+      <%= image_tag "/assets/previous.png", id: 'show_previous', size: '48x48', title: 'Previous Page' %>
+      <%= image_tag "/assets/next.png", id: 'show_next', size: '48x48', title: 'Next Page' %>
+</div>
+
+<table id='table_players' class="display nowrap" cellspacing="0" width="100%">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Team</th>
+      <th>Position</th>
+      <th>Average</th>
+      <th>Home Runs</th>
+      <th>RBI</th>
+      <th>Runs</th>
+      <th>Steals</th>
+      <th>OPS</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @players.each do |player| %>
+      <tr>
+        <td><%= player.given_name %></td>
+        <td><%= player.surname %></td>
+        <td><%= player.team.name %></td>
+        <td><%= player.position %></td>
+
+        <td><%= player.avg %></td>
+        <td><%= player.home_runs %></td>
+        <td><%= player.rbi %></td>
+        <td><%= player.runs %></td>
+        <td><%= player.steals %></td>
+        <td><%= player.ops %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<div style='padding: 10px;'><span id='page_info'></span></div>
+
+
+

@@ -1,0 +1,41 @@
+body > h1 {
+  padding: 10px;
+}
+
+#table_players > tbody > tr:nth-child(odd) {
+   background-color: #F6F9ED;
+}
+
+#table_players_wrapper {
+  margin-top: 0px;
+}
+
+div.dataTables_wrapper {
+  margin: 0 auto;
+}
+
+#table_players_info,
+#table_players_length {
+  display: none;
+}
+
+#page_info {
+  color: black;
+  font-size: 1.1em;
+}
+
+#show_previous,
+#show_next {
+  padding: 10px;
+  border-radius: 10px;
+  color: #337ab7;
+  background-color: lightgray;
+  text-decoration: none;
+}
+
+#show_previous:hover,
+#show_next:hover  {
+  color: white;
+  background-color: #575757;
+  text-decoration: underline;
+}
