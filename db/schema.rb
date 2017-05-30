@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170529052914) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "divisions", force: :cascade do |t|
     t.string "name"
     t.integer "league_id"
@@ -123,4 +126,8 @@ ActiveRecord::Schema.define(version: 20170529052914) do
     t.index ["name"], name: "index_teams_on_name"
   end
 
+  add_foreign_key "divisions", "leagues", on_delete: :cascade
+  add_foreign_key "leagues", "seasons", on_delete: :cascade
+  add_foreign_key "players", "teams", on_delete: :cascade
+  add_foreign_key "teams", "divisions", on_delete: :cascade
 end
