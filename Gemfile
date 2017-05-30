@@ -6,7 +6,12 @@ git_source(:github) do |repo_name|
 end
 
 gem 'nokogiri'
+gem 'libxml-ruby'
+gem 'nokogiri-happymapper', :require => 'happymapper'
 
+gem 'jquery-rails'
+gem 'jquery-datatables-rails', '~> 3.4.0'
+gem 'bootstrap-sass', '~> 3.3.6'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.1'

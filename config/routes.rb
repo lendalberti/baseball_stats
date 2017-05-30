@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  get 'stats/index'
+  
+  root 'players#index'
 
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'players/info', to: 'players#info'
+  resources :players
+  
 end

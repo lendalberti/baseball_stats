@@ -14,5 +14,7 @@ module EverQuote
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    config.display_max_rows_per_page = 25
   end
 end
